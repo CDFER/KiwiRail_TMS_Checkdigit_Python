@@ -13,8 +13,8 @@ A TMS number is a four-digit number that starts with a letter or letters, follow
 For example, the TMS number "DX5016" breaks down as follows:
 
 * "DX" is the class identifier
-* "50" is the base number
-* "1" is the check digit
+* "501" is the base number
+* "6" is the check digit
 
 The check digit is calculated using a weighted sum algorithm, which ensures that the TMS number is unique and can be verified for accuracy.
 
