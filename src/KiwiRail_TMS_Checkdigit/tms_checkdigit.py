@@ -1,3 +1,41 @@
+def fix_tms_class_exceptions(tms_number: str) -> str:
+    """
+    Fixes TMS class exceptions. Some sub-classes keep their original TMS numbers like the DXB,
+    while some like the DXR class received new TMS numbers. Some sub-classes just don't use the 
+    last letter like the AK sub-classes 
+
+    Args:
+        tms_number (str): The TMS number to fix.
+
+    Returns:
+        str: The fixed TMS number.
+    """
+
+    class_fixes = {
+        "AKF": "AK",
+        "AKP": "AK",
+        "DXC": "DX",
+        "DXB": "DX",
+        "DFB": "DFT",
+        "DCP": "DC",
+    }
+
+    # Initialize the fixed TMS number to the original TMS number
+    fixed_tms_number = tms_number
+
+    # Iterate over each TMS prefix and its corresponding fixed prefix
+    for prefix, fixed_prefix in class_fixes.items():
+        # Check if the TMS number starts with the TMS prefix
+        if tms_number.startswith(prefix):
+            # Replace the TMS prefix with the fixed prefix
+            fixed_tms_number = fixed_tms_number.replace(prefix, fixed_prefix, 1)
+            # Break out of the loop since we've found a match
+            break
+
+    # Return the fixed TMS number
+    return fixed_tms_number
+
+
 def convert_char_to_digits(char: str) -> list[int]:
     """
     Converts a character to a list of digits based on its ASCII value.
@@ -54,6 +92,9 @@ def raw_check_digit_calculation(tms_number: str) -> int:
     Returns:
         int: The calculated check digit.
     """
+    
+    tms_number = fix_tms_class_exceptions(tms_number)
+    
     # Count the number of leading letters in the TMS number
     leading_letters = next(
         (i for i, char in enumerate(tms_number) if not char.isalpha()), len(tms_number)
