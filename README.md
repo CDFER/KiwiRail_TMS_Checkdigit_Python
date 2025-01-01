@@ -34,7 +34,7 @@ To use the package, import the `tms_checkdigit` module and call the `calculate_c
 import KiwiRail_TMS_Checkdigit as tms
 
 print(tms.calculate_check_digit("AMA100"))
-print(tms.calculate_check_digit("AMA100"))
+print(tms.calculate_check_digit("AMP100"))
 
 ```
 
