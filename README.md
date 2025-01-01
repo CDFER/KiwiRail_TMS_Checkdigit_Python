@@ -8,7 +8,7 @@ A TMS (Traffic Monitoring System) number is a unique identifier used by KiwiRail
 
 ## What is a TMS Number?
 
-A TMS number is a four-digit number that starts with a letter or letters, followed by a series of numbers. The last digit of the TMS number is a check digit that is calculated based on the preceding digits. The TMS number system was introduced in 1979 as part of the computerised Traffic Monitoring System. The system assigns unique numbers to each locomotive and piece of rolling stock, allowing for efficient tracking and management.
+A TMS number starts with a letter or letters, followed by a series of numbers. The last digit of the TMS number is a check digit that is calculated based on the preceding digits and letters. The TMS number system was introduced in 1979 as part of the computerised Traffic Monitoring System. The system assigns unique numbers to each locomotive and piece of rolling stock, allowing for efficient tracking and management.
 
 For example, the TMS number "DX5016" breaks down as follows:
 
