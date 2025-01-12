@@ -18,6 +18,8 @@ For example, the TMS number "DX5016" breaks down as follows:
 
 The check digit is calculated using a weighted sum algorithm, which ensures that the TMS number is unique and can be verified for accuracy.
 
+## [How To Calculate a TMS number by hand](/checkdigit-calculation.md)
+
 ## Installation
 
 To install the package, run the following command:
@@ -36,14 +38,6 @@ import KiwiRail_TMS_Checkdigit as tms
 print(tms.calculate_check_digit("AMA100"))
 print(tms.calculate_check_digit("AMP100"))
 
-```
-
-## Testing
-
-To run the tests, use the following command:
-
-```bash
-python setup.py test
 ```
 
 ## Contributing
